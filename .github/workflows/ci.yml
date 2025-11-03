@@ -38,3 +38,11 @@ jobs:
         with:
           name: coverage-report
           path: coverage/
+
+      - name: Deploy to Render
+        if: github.ref == 'refs/heads/main' && success()
+        run: |
+            curl -X POST \
+            -H "Accept: application/json" \
+            -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
+            https://api.render.com/deploy/srv-d444b2je5dus73ahliig
