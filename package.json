@@ -5,10 +5,10 @@
   "repository": "https://github.com/rainn22/non-sorany-lab1.git",
   "license": "MIT",
   "dependencies": {
+    "chai": "4",
     "express": "^5.1.0"
   },
   "devDependencies": {
-    "chai": "^6.2.0",
     "eslint": "8",
     "mocha": "^11.7.4",
     "supertest": "^7.1.4"
